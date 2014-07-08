@@ -1,8 +1,7 @@
 require 'csv'
-
 class FileParser
   def get_data(path)
-    data = File.read(path)
-    @parsed = CSV.parse(data)
+    csv_data = File.open(path)
+    CSV.parse(csv_data)
   end
 end
